@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
+    <RootNamespace>nasa_api</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <StartupObject>nasa_api.App</StartupObject>
+    <ApplicationIcon>Images\app_icon.ico</ApplicationIcon>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="app_icon.ico" />
+    <None Remove="app_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\app_icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="107.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="app_icon.ico" />
+    <Resource Include="app_icon.png" />
+  </ItemGroup>
+
+</Project>
