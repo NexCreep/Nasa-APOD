@@ -15,7 +15,7 @@
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <StackPanel x:Name="NasaImageSP" Grid.Column="0" VerticalAlignment="Center" Margin="50">
-            <Image x:Name="NasaImage" Source="/app_icon.png" />
+            <Image x:Name="NasaImage" Source="/app_icon.png" Margin="8"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Orientation="Vertical">
             <TextBlock Text="Loading..."
