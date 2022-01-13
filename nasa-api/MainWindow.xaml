@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Height="675" Width="1200"
         MinHeight="450" MinWidth="800"
-        MaxHeight="675" MaxWidth="1200"
         Title="Nasa Astronomy Picture of the Day" Background="#FF040821" Icon="/app_icon.ico">
     <Grid Loaded="Grid_Loaded">
         <Grid.ColumnDefinitions>
@@ -17,7 +16,7 @@
         <StackPanel x:Name="NasaImageSP" Grid.Column="0" VerticalAlignment="Center" Margin="50">
             <Image x:Name="NasaImage" Source="/app_icon.png" Margin="8"/>
         </StackPanel>
-        <StackPanel Grid.Column="1" Orientation="Vertical">
+        <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center">
             <TextBlock Text="Loading..."
                        x:Name="NasaTitle"
                        FontSize="26" 
@@ -28,12 +27,21 @@
             <ScrollViewer HorizontalScrollBarVisibility="Disabled" MaxHeight="300" VerticalScrollBarVisibility="Auto">
                 <TextBlock Text=""
                        x:Name="NasaContent"
-                       FontSize="14"
+                       FontSize="16"
                        Foreground="White"
                        TextWrapping="Wrap"
                        TextAlignment="Justify"
                        Padding="10 0 30 0"/>
             </ScrollViewer>
+            <StackPanel>
+                <TextBlock Text=""
+                           x:Name="NasaCopyrightDate"
+                           FontSize="12" 
+                           Foreground="White"
+                           TextWrapping="Wrap"
+                           TextAlignment="Justify"
+                           Padding="10"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

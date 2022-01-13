@@ -43,6 +43,7 @@ namespace nasa_api
 
                 NasaTitle.Text = resJson.Title;
                 NasaContent.Text = resJson.Explanation;
+                NasaCopyrightDate.Text = String.Format("© {0}  ·  {1}", resJson.Copyright, resJson.Date);
             }
 
         }
